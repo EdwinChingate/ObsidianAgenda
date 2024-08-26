@@ -25,7 +25,7 @@ def FilesTemplates(Year,Month,FilesFolder='Files',FileName='Events',FinalDest=''
         DateString_=DateString+'-'
         FullFileName=DateString_+FileName+'.md'
         FileLoc=FolderLoc+'/'+FullFileName
-        WritenName='- [['+FinalDest+'/'+str(Year)+'/'+monthString+'/'+FullFileName+'|'+FullFileName+']]\n'
+        WritenName='- [['+FullFileName+']]\n'
         command=command0+FileLoc    
         day=Day_of_the_week(Year,Month,Day)
         TemplatesFolder=FolderLoc
