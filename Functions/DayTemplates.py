@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 from DatesStr import *
 from Day_of_the_week import *
+from RewriteSameInFoldersInside import *
+from RewriteFile import *
 def DayTemplates(Year,Month,TemplatesFolder='DayTemplates'):
     home=os.getcwd()
     Months=pd.read_csv('Months.csv',index_col=0)
@@ -17,7 +19,7 @@ def DayTemplates(Year,Month,TemplatesFolder='DayTemplates'):
     command2="cp ./Files/Finances.md ./"
     command3="cp ./Files/Thoughts_and_Observations.md ./"
     os.mkdir(monthString)
-    for Day in np.arange(MaxDay+1):
+    for Day in np.arange(1,MaxDay+1):
         DateString=DatesStr(Year,Month,Day)
         FolderLoc=monthString+'/'+DateString
         DateString_=DateString+'-'
